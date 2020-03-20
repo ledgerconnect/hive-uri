@@ -241,17 +241,17 @@ function encodeJson(data: any) {
     return b64uEnc(JSON.stringify(data, null, 0))
 }
 
-/** Encodes a Steem transaction to a steem: URI. */
+/** Encodes a Hive transaction to a hive: URI. */
 export function encodeTx(tx: Transaction, params: Parameters = {}) {
-    return `steem://sign/tx/${ encodeJson(tx) }${ encodeParameters(params) }`
+    return `hive://sign/tx/${ encodeJson(tx) }${ encodeParameters(params) }`
 }
 
-/** Encodes a Steem operation to a steem: URI. */
+/** Encodes a Hive operation to a hive: URI. */
 export function encodeOp(op: Operation, params: Parameters = {}) {
-    return `steem://sign/op/${ encodeJson(op) }${ encodeParameters(params) }`
+    return `hive://sign/op/${ encodeJson(op) }${ encodeParameters(params) }`
 }
 
-/** Encodes several Steem operations to a steem: URI. */
+/** Encodes several Hive operations to a hive: URI. */
 export function encodeOps(ops: Operation, params: Parameters = {}) {
-    return `steem://sign/ops/${ encodeJson(ops) }${ encodeParameters(params) }`
+    return `hive://sign/ops/${ encodeJson(ops) }${ encodeParameters(params) }`
 }

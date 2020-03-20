@@ -1,7 +1,7 @@
 {
-  "name": "steem-uri",
+  "name": "hive-uri",
   "version": "0.1.0",
-  "description": "Steem URI parser and encoder",
+  "description": "Hive URI parser and encoder",
   "license": "MIT",
   "main": "./lib/index",
   "typings": "./lib/index",
