@@ -69,7 +69,7 @@ export interface DecodeResult {
  * @returns The resolved transaction and parameters.
  */
 export function decode(hiveUrl: string): DecodeResult {
-    const protocol = hiveUrl.slice(0, 6)
+    const protocol = hiveUrl.slice(0, 5)
     // workaround for chrome not parsing custom protocols correctly
     const url = new URL(hiveUrl.replace(/^hive:/, 'http:'))
     if (protocol !== 'hive:') {
