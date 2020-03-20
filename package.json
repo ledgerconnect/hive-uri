@@ -1,6 +1,6 @@
 {
   "name": "hive-uri",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Hive URI parser and encoder",
   "license": "MIT",
   "main": "./lib/index",

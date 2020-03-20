@@ -1,5 +1,5 @@
 /**
- * Steem URI Signing Protocol
+ * Hive URI Signing Protocol
  * @author Johan Nordberg <johan@steemit.com>
  */
 
@@ -63,15 +63,15 @@ export interface DecodeResult {
 }
 
 /**
- * Parse a steem:// protocol link.
- * @param steemUrl The `steem:` url to parse.
+ * Parse a hive:// protocol link.
+ * @param hiveUrl The `hive:` url to parse.
  * @throws If the url can not be parsed.
  * @returns The resolved transaction and parameters.
  */
-export function decode(steemUrl: string): DecodeResult {
-    const url = new URL(steemUrl)
-    if (url.protocol !== 'steem:') {
-        throw new Error(`Invalid protocol, expected 'steem:' got '${ url.protocol }'`)
+export function decode(hiveUrl: string): DecodeResult {
+    const url = new URL(hiveUrl)
+    if (url.protocol !== 'hive:') {
+        throw new Error(`Invalid protocol, expected 'hive:' got '${ url.protocol }'`)
     }
     if (url.host !== 'sign') {
         throw new Error(`Invalid action, expected 'sign' got '${ url.host }'`)
